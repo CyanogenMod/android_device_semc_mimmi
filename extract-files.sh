@@ -105,6 +105,10 @@ adb pull /system/lib/libaudioeq.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/etc/sensors.conf ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/akmd2 ../../../vendor/$VENDOR/$DEVICE/proprietary
 
+#TS and slider
+adb pull /system/bin/inputattach ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/bin/slidercounter ../../../vendor/$VENDOR/$DEVICE/proprietary
+
 #offline charger
 adb pull /system/bin/chargemon ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/semc_chargalg ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -114,6 +118,7 @@ adb pull /system/lib/libmiscta.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 #hw
 adb pull /system/lib/hw/copybit.msm7k.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/hw/sensors.default.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/hw/lights.default.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/hw/hal_seport.default.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libsystemconnector/libuinputdevicejni.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libsystemconnector_hal_jni.so ../../../vendor/$VENDOR/$DEVICE/proprietary

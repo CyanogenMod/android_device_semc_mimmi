@@ -39,7 +39,7 @@ DEVICE=mimmi
 
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \\
-vendor/__VENDOR__/__DEVICE__/proprietary/robyn_keypad.kl:system/usr/keylayout/mimmi_keypad.kl \\
+vendor/__VENDOR__/__DEVICE__/proprietary/mimmi_keypad.kl:system/usr/keylayout/mimmi_keypad.kl \\
 vendor/__VENDOR__/__DEVICE__/proprietary/systemconnector.kl:system/usr/keylayout/systemconnector.kl \\
 vendor/__VENDOR__/__DEVICE__/proprietary/mimmi_keypad.kcm.bin:system/usr/keychars/mimmi_keypad.kcm.bin \\
 vendor/__VENDOR__/__DEVICE__/proprietary/systemconnector.kcm.bin:system/usr/keychars/systemconnector.kcm.bin
@@ -107,9 +107,10 @@ vendor/__VENDOR__/__DEVICE__/proprietary/fmc_init_1273.1.bts:system/etc/firmware
 vendor/__VENDOR__/__DEVICE__/proprietary/fmc_init_1273.2.bts:system/etc/firmware/fmc_init_1273.2.bts \\
 vendor/__VENDOR__/__DEVICE__/proprietary/TIInit_7.2.31.bts:system/etc/firmware/TIInit_7.2.31.bts 
 
-## SE Sensors
+## HW
 PRODUCT_COPY_FILES += \\
-vendor/__VENDOR__/__DEVICE__/proprietary/sensors.default.so:system/lib/hw/sensors.delta.so
+vendor/__VENDOR__/__DEVICE__/proprietary/sensors.default.so:system/lib/hw/sensors.delta.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/lights.default.so:system/lib/hw/lights.delta.so
 
 ## WIFI & BT TI1271
 PRODUCT_COPY_FILES += \\
@@ -131,6 +132,11 @@ vendor/__VENDOR__/__DEVICE__/proprietary/libaudioeq.so:obj/lib/libaudioeq.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libaudioeq.so:system/lib/libaudioeq.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/sensors.conf:system/etc/sensors.conf \\
 vendor/__VENDOR__/__DEVICE__/proprietary/akmd2:system/bin/akmd2 
+
+#TS and Slider 
+PRODUCT_COPY_FILES += \\
+vendor/__VENDOR__/__DEVICE__/proprietary/inputattach:system/bin/inputattach \\
+vendor/__VENDOR__/__DEVICE__/proprietary/slidercounter:system/bin/slidercounter
 
 #offline charging animation
 PRODUCT_COPY_FILES += \\

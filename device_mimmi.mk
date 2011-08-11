@@ -9,7 +9,7 @@ $(call inherit-product-if-exists, vendor/semc/mimmi/mimmi-vendor.mk)
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := U20i
 PRODUCT_DEVICE := mimmi
-PRODUCT_MODEL := U200i
+PRODUCT_MODEL := U20i
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/semc/mimmi/kernel
@@ -22,6 +22,7 @@ PRODUCT_COPY_FILES += \
 
 -include device/semc/msm7x27-common/msm7x27.mk
 
+
 # These is the hardware-specific overlay, which points to the location
 # of hardware-specific resource overrides, typically the frameworks and
 # application settings that are stored in resourced.
@@ -29,7 +30,8 @@ DEVICE_PACKAGE_OVERLAYS += device/semc/mimmi/overlay
 
 # These are the hardware-specific configuration files
 PRODUCT_COPY_FILES += \
-    device/semc/mimmi/prebuilt/media_profiles.xml:system/etc/media_profiles.xml 
+    device/semc/mimmi/prebuilt/media_profiles.xml:system/etc/media_profiles.xml \
+    device/semc/msm7x27-common/prebuilt/initlogo_ldpi.rle:root/initlogo.rle
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -38,7 +40,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=120 \
 
-# mimmi uses high-density artwork where available
-PRODUCT_LOCALES += ldpi
-
-
+#new charging animations LDPI
+PRODUCT_COPY_FILES += \
+    device/semc/msm7x27-common/prebuilt/animations/anim1.rle:system/etc/semc/chargemon/anim1.rle \
+    device/semc/msm7x27-common/prebuilt/animations/anim2.rle:system/etc/semc/chargemon/anim2.rle \
+    device/semc/msm7x27-common/prebuilt/animations/anim3.rle:system/etc/semc/chargemon/anim3.rle \
+    device/semc/msm7x27-common/prebuilt/animations/anim4.rle:system/etc/semc/chargemon/anim4.rle \
+    device/semc/msm7x27-common/prebuilt/animations/anim5.rle:system/etc/semc/chargemon/anim5.rle \
+    device/semc/msm7x27-common/prebuilt/animations/anim6.rle:system/etc/semc/chargemon/anim6.rle \
+    device/semc/msm7x27-common/prebuilt/animations/anim7.rle:system/etc/semc/chargemon/anim7.rle \
+    device/semc/msm7x27-common/prebuilt/animations/anim8.rle:system/etc/semc/chargemon/anim8.rle 
