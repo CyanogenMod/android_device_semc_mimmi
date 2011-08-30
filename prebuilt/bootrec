@@ -1,6 +1,5 @@
 #!/sbin/sh
 
-
 cat /dev/input/event0 > /dev/keycheck&
 sleep 3
 kill -9 $!
@@ -28,4 +27,5 @@ mount /dev/block/mmcblk0p1 /sdcard
 /sbin/adbd recovery 
 fi
 
+/system/bin/charger
 #continue booting
