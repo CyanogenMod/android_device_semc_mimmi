@@ -114,7 +114,8 @@ vendor/__VENDOR__/__DEVICE__/proprietary/lights.default.so:system/lib/hw/lights.
 
 ## WIFI & BT TI1271
 PRODUCT_COPY_FILES += \\
-vendor/__VENDOR__/__DEVICE__/proprietary/hciattach:system/bin/hciattach
+vendor/__VENDOR__/__DEVICE__/proprietary/hciattach:system/bin/hciattach \\
+vendor/__VENDOR__/__DEVICE__/proprietary/nvimport:system/bin/nvimport
 
 ## Adreno 200 files
 PRODUCT_COPY_FILES += \\
@@ -138,7 +139,7 @@ vendor/__VENDOR__/__DEVICE__/proprietary/slidercounter:system/bin/slidercounter
 
 #offline charging animation
 PRODUCT_COPY_FILES += \\
-vendor/__VENDOR__/__DEVICE__/proprietary/chargemon:system/bin/charger \\
+vendor/__VENDOR__/__DEVICE__/proprietary/chargemon:system/bin/chargemon \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libmiscta.so:system/lib/libmiscta.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/semc_chargalg:system/bin/semc_chargalg \\
 vendor/__VENDOR__/__DEVICE__/proprietary/updatemiscta:system/bin/updatemiscta 

@@ -30,6 +30,8 @@ DEVICE_PACKAGE_OVERLAYS += device/semc/mimmi/overlay
 
 # These are the hardware-specific configuration files
 PRODUCT_COPY_FILES += \
+    device/semc/mimmi/prebuilt/tiwlan.ini:system/etc/wifi/tiwlan.ini \
+    device/semc/mimmi/prebuilt/tiwlan_ap.ini:system/etc/wifi/softap/tiwlan_ap.ini \
     device/semc/mimmi/prebuilt/media_profiles.xml:system/etc/media_profiles.xml \
     device/semc/msm7x27-common/prebuilt/initlogo_ldpi.rle:root/initlogo.rle \
     device/semc/mimmi/prebuilt/AudioFilter.csv:system/etc/AudioFilter.csv
