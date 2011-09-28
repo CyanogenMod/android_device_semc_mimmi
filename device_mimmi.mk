@@ -42,7 +42,7 @@ PRODUCT_COPY_FILES += \
 
 # kernel.sin prebuilt for now
 PRODUCT_COPY_FILES += \
-    device/semc/mimmi/prebuilt/kernel.sin:system/kernel.sin
+    device/semc/mimmi/prebuilt/kernel.sin:kernel.sin
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=120 \
