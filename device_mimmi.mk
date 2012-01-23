@@ -7,21 +7,11 @@ $(call inherit-product-if-exists, vendor/semc/mimmi/mimmi-vendor.mk)
 
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := U20i
+PRODUCT_NAME := Xperia X10 Mini Pro
 PRODUCT_DEVICE := mimmi
 PRODUCT_MODEL := U20i
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/semc/mimmi/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
-
 -include device/semc/msm7x27-common/msm7x27.mk
-
 
 # These is the hardware-specific overlay, which points to the location
 # of hardware-specific resource overrides, typically the frameworks and
